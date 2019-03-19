@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.files = `git ls-files lib *.md`.split("\n")
   s.homepage = 'https://github.com/mladenilic/ar-settings'
 
-  s.required_ruby_version = '>= 2.2.9'
+  s.required_ruby_version = '>= 2.3.6'
 
   s.require_paths = ['lib']
   s.license = 'MIT'
