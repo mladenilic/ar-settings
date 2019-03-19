@@ -1,0 +1,5 @@
+/.idea
+spec/rails_app/log/*
+*.log
+*.sqlite3
+.DS_Store

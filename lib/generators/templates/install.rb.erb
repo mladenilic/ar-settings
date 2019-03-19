@@ -1,0 +1,12 @@
+class SettingsMigration < ActiveRecord::Migration[<%= "#{Rails::VERSION::MAJOR}.#{Rails::VERSION::MINOR}" %>]
+  def change
+    create_table :settings do |t|
+      t.string :key, null: false
+      t.text :value
+
+      t.timestamps
+    end
+
+    add_index :settings, :key, unique: true
+  end
+end
