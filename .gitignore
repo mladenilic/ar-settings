@@ -1,4 +1,5 @@
 /.idea
+/coverage
 spec/rails_app/log/*
 *.log
 *.sqlite3

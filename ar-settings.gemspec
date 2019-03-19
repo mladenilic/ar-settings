@@ -15,4 +15,5 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
 
   s.add_development_dependency 'rspec-rails', '~> 3.8'
+  s.add_development_dependency 'simplecov'
 end

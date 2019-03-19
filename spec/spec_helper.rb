@@ -1,7 +1,12 @@
+ENV['RAILS_ENV'] ||= 'test'
+
 require 'bundler/setup'
 Bundler.setup
 
-ENV['RAILS_ENV'] ||= 'test'
+require 'simplecov'
+SimpleCov.start do
+  add_filter '/spec/'
+end
 
 require 'rails_app/config/environment'
 require 'settings'
