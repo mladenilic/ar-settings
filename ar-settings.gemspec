@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors = ['Mladen Ilic']
   s.email = 'mladen@drei.one'
   s.files = `git ls-files lib *.md`.split("\n")
-  s.homepage = 'https://drei.one'
+  s.homepage = 'https://github.com/mladenilic/ar-settings'
 
   s.required_ruby_version = '>= 2.2.9'
 
