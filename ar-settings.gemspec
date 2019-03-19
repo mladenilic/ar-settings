@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name = 'ar-settings'
-  s.version = '0.0.0'
+  s.version = '0.1.0'
   s.date = '2019-03-19'
-  s.summary = 'Simple global database stored application configuration'
-  s.description = 'Store your application configuration in database as key/value pairs'
+  s.summary = 'Global Application Settings for Ruby on Rails built on Active Record'
+  s.description = 'Simplified, permanent key-value store for global application settings.'
   s.authors = ['Mladen Ilic']
   s.email = 'mladen@drei.one'
   s.files = `git ls-files lib *.md`.split("\n")
