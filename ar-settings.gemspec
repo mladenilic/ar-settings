@@ -13,4 +13,6 @@ Gem::Specification.new do |s|
 
   s.require_paths = ['lib']
   s.license = 'MIT'
+
+  s.add_development_dependency 'rspec-rails', '~> 3.8'
 end
