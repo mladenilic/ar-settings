@@ -18,18 +18,40 @@ $ rails generate install_settings
 ```
 
 ## Usage
-Gem implements minimal amount of public methods needed to manage settings:
-```rb
-Settings.set(:key, 'value')
-Settings.get(:key)
+Gem implements minimal amount of public methods needed to manage settings
 
-Settings.has(:key)
-Settings.unset(:key)
+### Storing and fetching settings
+
+```rb
+Settings.set(:key, 'value')    # store a value
+Settings.get(:key)             # fetch a value
 ```
 
+```rb
+Settings.key = 'value'         # equivalent to Settings.set(...)
+Settings.key                   # equivalent to Settings.get(...)
+```
+
+### Mass update
+
+Method convenient for handling settings form submission.
+```rb
+Settings.update({
+  key: 'value',
+  key2: 'value2',
+  ...
+})
+```
+
+### Additional methods
+```rb
+Settings.has(:key)             # check if setting field exists
+Settings.unset(:key)           # remove stored value if exists
+```
+
+
 ## To do
-1. Allow mass assignments
-2. Utilize `Rails.cache` to reduce overhead of querying db
+1. Utilize `Rails.cache` to reduce overhead of querying db
 
 ## Licence
 Licensed under the MIT license.
