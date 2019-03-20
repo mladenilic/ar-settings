@@ -17,4 +17,14 @@ class Settings < ActiveRecord::Base
   def self.unset(key)
     find_by(key: key)&.destroy
   end
+
+  private
+
+  def self.method_missing(method_name, *arguments)
+    if method_name =~ /=$/
+      set method_name.to_s.gsub('=', ''), arguments.first
+    else
+      get method_name
+    end
+  end
 end
