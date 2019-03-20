@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'ar-settings'
-  s.version = '0.1.0'
+  s.version = '0.2.0'
   s.date = '2019-03-19'
   s.summary = 'Global Application Settings for Ruby on Rails built on Active Record'
   s.description = 'Simplified, permanent key-value store for global application settings.'
