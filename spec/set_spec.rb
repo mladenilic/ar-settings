@@ -1,11 +1,9 @@
 require 'spec_helper'
 
 describe 'set method', model: true do
-  it 'does not raise error' do
-    expect { Settings.set(:key, 'value') }.not_to raise_error
-  end
-
   it 'sets correct value' do
+    expect(Settings.has(:key)).to eq false
+
     Settings.set(:key, 'value')
 
     expect(Settings.get(:key)).to eq 'value'
