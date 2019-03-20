@@ -12,6 +12,6 @@ require 'rails_app/config/environment'
 require 'settings'
 
 RSpec.configure do |config|
-  config.before(:suite) { ActiveRecord::MigrationContext.new(Rails.root.join('db', 'migrate')).migrate }
-  config.after(:suite) { ActiveRecord::MigrationContext.new(Rails.root.join('db', 'migrate')).rollback }
+  config.before(:context) { ActiveRecord::MigrationContext.new(Rails.root.join('db', 'migrate')).migrate }
+  config.after(:context) { ActiveRecord::MigrationContext.new(Rails.root.join('db', 'migrate')).rollback }
 end

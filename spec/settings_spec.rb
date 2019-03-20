@@ -16,4 +16,8 @@ describe Settings, 'model', model: true do
   it 'responds to unset method' do
     expect(Settings).to respond_to :unset
   end
+
+  it 'responds to update' do
+    expect(Settings).to respond_to :update
+  end
 end

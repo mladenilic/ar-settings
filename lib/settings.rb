@@ -18,6 +18,10 @@ class Settings < ActiveRecord::Base
     find_by(key: key)&.destroy
   end
 
+  def self.update(fields)
+    fields.each { |key, value| set(key, value) }
+  end
+
   private
 
   def self.method_missing(method_name, *arguments)
